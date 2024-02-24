@@ -5,5 +5,5 @@
  RUN mvn clean package
 
 FROM alpine
-COPY --from=build /test/target/spring-boot-mongo.jar ./spring-boot-mongo.jar
-CMD ['java', '-jar', './spring-boot-mongo.jar']
+COPY --from=build /test/target/spring-boot-mongo-1.0.jar ./spring-boot-mongo-1.0.jar
+CMD ['java', '-jar', './spring-boot-mongo-1.0.jar']

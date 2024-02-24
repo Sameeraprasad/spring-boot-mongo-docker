@@ -1,0 +1,9 @@
+ FROM: maven:latest as build
+ RUN mkdir /test
+ WORKDIR /test
+ COPY . .
+ RUN mvn clean package
+
+FROM alpine
+COPY --from=build target/*.jar ./*.jar
+CMD ['java', '-jar', 'spring-boot.jar']

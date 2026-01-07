@@ -1,4 +1,4 @@
-FROM openjdk:8-alpine
+FROM amazoncorretto:8-alpine3.22
 
 # Required for starting application up.
 RUN apk update && apk add /bin/sh
